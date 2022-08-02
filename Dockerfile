@@ -41,5 +41,4 @@ COPY ["/target/nist-data-mirror.jar", "/usr/local/bin/"]
 EXPOSE 80/tcp
 VOLUME ["/usr/local/apache2/htdocs"]
 RUN chmod 777 /usr/local/apache2/htdocs
-RUN ls -l /usr/local/apache2/htdocs
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.conf", "-l", "/var/log/supervisord.log", "-j", "/var/run/supervisord.pid"]
