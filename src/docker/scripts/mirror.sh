@@ -2,8 +2,8 @@
 
 echo "Updating..."
 
-files=$(java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -jar /usr/local/bin/nist-data-mirror.jar /tmp/nvd | grep -Eo '(Download succeeded|Uncompressed).*' | grep -Eo '[^ ]*\.(gz|meta|json|xml)')
-
+java -Xmx1792m -jar /usr/local/bin/vulnz-5.1.0.jar cve --cache --directory /tmp/nvd
+files=$(ls /tmp/nvd)
 timestamp=$(date +%s)
 
 for f in $files

@@ -1,1 +1,1 @@
-0 */4 * * * /mirror.sh
+0 11 * * * /mirror.sh
