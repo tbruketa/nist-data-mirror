@@ -36,7 +36,7 @@ COPY ["/src/docker/conf/supervisord.conf", "/etc/supervisor/conf.d/supervisord.c
 COPY ["/src/docker/scripts/mirror.sh", "/mirror.sh"]
 COPY ["/src/docker/crontab/mirror", "/etc/crontabs/mirror"]
 COPY ["/src/docker/conf/mirror.conf", "/usr/local/apache2/conf"]
-COPY ["/target/vulnz-5.1.0.jar", "/usr/local/bin/"]
+COPY ["/target/vulnz-6.1.2.jar", "/usr/local/bin/"]
 
 EXPOSE 80/tcp
 VOLUME ["/usr/local/apache2/htdocs"]

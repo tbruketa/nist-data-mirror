@@ -1,8 +1,8 @@
 #!/bin/sh
 
 echo "Updating..."
-
-java -Xmx1792m -jar /usr/local/bin/vulnz-5.1.0.jar cve --cache --directory /tmp/nvd
+export NVD_API_KEY=a6f94019-db22-4777-b767-26bd39d38f1c
+java -Xmx1792m -jar /usr/local/bin/vulnz-6.1.2.jar cve --cache --directory /tmp/nvd
 files=$(ls /tmp/nvd)
 timestamp=$(date +%s)
 
